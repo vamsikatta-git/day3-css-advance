@@ -1,0 +1,91 @@
+Flexbox is a one-dimensional layout method for arranging items in rows or columns. It is designed to distribute space and align items within a container efficiently.
+
+Key Properties:
+
+display: flex - Makes an element a flex container.
+flex-direction - Defines the direction of the main axis (row, row-reverse, column, column-reverse).
+justify-content - Aligns items along the main axis (flex-start, flex-end, center, space-between, space-around, space-evenly).
+align-items - Aligns items along the cross-axis (stretch, flex-start, flex-end, center, baseline).
+flex-wrap - Controls whether items wrap onto multiple lines (nowrap, wrap, wrap-reverse).
+flex - A shorthand property for flex-grow, flex-shrink, and flex-basis.
+
+Basic Horizontal Flexbox:
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.item {
+  padding: 20px;
+  background-color: lightblue;
+  margin: 10px;
+}
+
+Vertical Flexbox with Wrap:
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 300px;
+}
+
+.item {
+  background-color: coral;
+  padding: 15px;
+}
+
+Grid is a two-dimensional layout system that lets you arrange items into rows and columns, allowing for precise control over layout design.
+
+Key Properties:
+
+display: grid - Makes an element a grid container.
+grid-template-rows / grid-template-columns - Defines the rows and columns of the grid.
+grid-template-areas - Assigns names to specific areas of the grid.
+gap / row-gap / column-gap - Specifies spacing between grid items.
+justify-items - Aligns items horizontally within their cells.
+align-items - Aligns items vertically within their cells.
+grid-auto-rows / grid-auto-columns - Automatically defines the size of rows or columns.
+
+Basic Grid Layout:
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: auto;
+  gap: 10px;
+}
+
+.item {
+  background-color: lightgreen;
+  padding: 20px;
+}
+Grid Template Areas:
+
+.container {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "sidebar main main"
+    "footer footer footer";
+  grid-template-rows: 50px 1fr 30px;
+  grid-template-columns: 150px 1fr 1fr;
+}
+
+.header {
+  grid-area: header;
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.main {
+  grid-area: main;
+}
+
+.footer {
+  grid-area: footer;
+}
